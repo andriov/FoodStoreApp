@@ -76,7 +76,7 @@ public class LateralMenu extends AppCompatActivity
         if (id == R.id.nav_shopper) {
             // Handle the camera action
         } else if (id == R.id.nav_seller) {
-            fragment = new FragmentPerfilVendedor();
+            fragment = new FragmentSellerProfile();
             //Intent intent = new Intent(this, SellerProfile.class);
             //startActivity(intent);
         } else if (id == R.id.nav_shopping_cart) {

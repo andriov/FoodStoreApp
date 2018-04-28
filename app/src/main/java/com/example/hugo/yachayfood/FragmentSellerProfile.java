@@ -30,7 +30,7 @@ import java.util.ArrayList;
 
 import javax.net.ssl.HttpsURLConnection;
 
-public class FragmentPerfilVendedor extends Fragment {
+public class FragmentSellerProfile extends Fragment {
 
     //Here I create an array list of string which will store the names of the products readed from the GET Method
     ArrayList<String> productos = new ArrayList<>();
