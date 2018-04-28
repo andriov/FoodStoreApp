@@ -1,20 +1,20 @@
 package com.example.hugo.yachayfood;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Registro extends AppCompatActivity {
+public class Registration extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registro);
+        setContentView(R.layout.activity_registration);
         Switch switchButton = (Switch) findViewById(R.id.switch_vendedor);
         final TextView textView = (TextView) findViewById(R.id.textSi);
 
@@ -33,7 +33,7 @@ public class Registro extends AppCompatActivity {
 
     }
     public void goToAutentification(View view){
-        Intent intent = new Intent(this, Autentificacion.class);
+        Intent intent = new Intent(this, Login.class);
         startActivity(intent);
         Toast toast = Toast.makeText(getApplicationContext(),"Te has registrado correctamente",Toast.LENGTH_SHORT);
         toast.show();

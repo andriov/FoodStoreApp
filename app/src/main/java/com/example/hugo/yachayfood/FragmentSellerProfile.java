@@ -50,7 +50,7 @@ public class FragmentSellerProfile extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.activity_perfil_vendedor, null);
+        View view = inflater.inflate(R.layout.activity_seller_profile, null);
 
         //This is the list view in the activity_home that will show us all the products as a list
         list = (ListView) view.findViewById(R.id.listView);

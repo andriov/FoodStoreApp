@@ -10,8 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 public class SliderAdapter extends PagerAdapter {
 
@@ -71,7 +71,7 @@ public class SliderAdapter extends PagerAdapter {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent activity=new Intent(context,Autentificacion.class);
+                Intent activity = new Intent(context, Login.class);
                 context.startActivity(activity);
 
             }});
