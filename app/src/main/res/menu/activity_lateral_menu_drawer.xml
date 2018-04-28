@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_shopper"
+            android:icon="@drawable/ic_shopper"
+            android:title="Perfil Comprador" />
+        <item
+            android:id="@+id/nav_seller"
+            android:icon="@drawable/ic_seller"
+            android:title="Perfil Vendedor" />
+        <item
+            android:id="@+id/nav_shopping_cart"
+            android:icon="@drawable/ic_shopping_cart"
+            android:title="Shopping Cart" />
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/ic_done_all_orders"
+            android:title="Orders"/>
+        <item
+            android:id="@+id/nav_feedback"
+            android:icon="@drawable/ic_comment_feedback"
+            android:title="Feedback" />
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/ic_info_about_us"
+            android:title="¿Quiénes somos?"/>
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_help"
+            android:title="Ayuda" />
+    </group>
+
+</menu>
