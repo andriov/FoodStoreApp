@@ -32,7 +32,7 @@
             android:name=".LateralMenu"
             android:label="@string/title_activity_lateral_menu"
             android:theme="@style/AppTheme" />
-        <activity android:name=".PerfilVendedor"></activity>
+        <activity android:name=".SellerProfile"></activity>
     </application>
 
 </manifest>

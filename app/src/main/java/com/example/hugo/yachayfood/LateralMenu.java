@@ -1,6 +1,5 @@
 package com.example.hugo.yachayfood;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -78,7 +77,7 @@ public class LateralMenu extends AppCompatActivity
             // Handle the camera action
         } else if (id == R.id.nav_seller) {
             fragment = new FragmentPerfilVendedor();
-            //Intent intent = new Intent(this, PerfilVendedor.class);
+            //Intent intent = new Intent(this, SellerProfile.class);
             //startActivity(intent);
         } else if (id == R.id.nav_shopping_cart) {
 
