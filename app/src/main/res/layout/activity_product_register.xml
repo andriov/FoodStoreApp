@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.hugo.yachayfood.ProductRegister"
+    android:background="@drawable/fondo_presen"
     android:orientation="vertical">
 
     <Space
         android:layout_width="1dp"
         android:layout_height="15dp" />
 
-    <!--Title of activity PRODUCT REGISTER-->
+    <!--Product register title-->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,12 +21,14 @@
         android:text="PRODUCT REGISTER"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:textColor="#000000"/>
+        android:textColor="#FFFFFF"
+        />
 
     <Space
         android:layout_width="1dp"
         android:layout_height="15dp" />
 
+    <!--Product name label -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,7 +36,8 @@
         android:text="Product Name:"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:textColor="#000000"/>
+        android:textColor="#FFFFFF"
+        />
 
     <Space
         android:layout_width="1dp"
@@ -48,6 +52,8 @@
         android:layout_weight="0.50"
         android:selectAllOnFocus="false"
         android:singleLine="false"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         />
 
     <Space
@@ -62,7 +68,8 @@
         android:text="Description:"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:textColor="#000000"/>
+        android:textColor="#FFFFFF"
+       />
 
     <Space
         android:layout_width="1dp"
@@ -77,6 +84,8 @@
         android:layout_weight="0.50"
         android:selectAllOnFocus="false"
         android:singleLine="false"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         />
 
     <Space
@@ -91,13 +100,14 @@
         android:text="Stock:"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:textColor="#000000"/>
+        android:textColor="#FFFFFF"
+        />
 
     <Space
         android:layout_width="1dp"
         android:layout_height="15dp" />
 
-    <!--Text editor of integer number-->
+    <!--Text editor of stock-->
     <EditText
         android:id="@+id/productStock"
         android:layout_width="match_parent"
@@ -106,6 +116,8 @@
         android:layout_weight="0.50"
         android:selectAllOnFocus="false"
         android:singleLine="false"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         />
 
     <Space
@@ -120,7 +132,8 @@
         android:text="Cost:"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:textColor="#000000"/>
+        android:textColor="#FFFFFF"
+        />
 
     <Space
         android:layout_width="1dp"
@@ -135,6 +148,8 @@
         android:layout_weight="0.50"
         android:selectAllOnFocus="false"
         android:singleLine="false"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         />
 
     <Space
@@ -148,7 +163,7 @@
         android:orientation="vertical"
         android:weightSum="1">
 
-        <!--Register Buttom-->
+        <!--Register of product buttom-->
         <Button
             android:id="@+id/btnRegister"
             android:layout_width="100dp"
