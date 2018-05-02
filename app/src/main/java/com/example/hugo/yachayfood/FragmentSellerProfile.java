@@ -14,6 +14,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.example.foodstorewebservice.OpenConnection;
+
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
