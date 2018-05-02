@@ -131,7 +131,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
-                android:text="Add New Product" />
+                android:text="Añadir Producto" />
 
             <Button
                 android:id="@+id/buttonDeleteProduct"
@@ -140,7 +140,7 @@
                 android:layout_above="@+id/buttonNewProduct"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
-                android:text="Delete Product" />
+                android:text="Eliminar Producto" />
 
         </LinearLayout>
     </ScrollView>
