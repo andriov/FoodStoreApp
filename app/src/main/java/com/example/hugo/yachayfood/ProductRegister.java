@@ -67,7 +67,7 @@ public class ProductRegister extends AppCompatActivity {
                             public void run() {
                                 try {
                                     //After the insertion the app go to seller profile
-                                    Intent i=new Intent(getApplicationContext(),FragmentSellerProfile.class);
+                                    Intent i=new Intent(getApplicationContext(),LateralMenu.class);
                                     //If the name is greater than 30 charcters or is a number we obtain a exception
                                     exception.stinException("name",productName.getText(),30);
                                     //If the name is greater than 240 charcters or is a number we obtain a exception
