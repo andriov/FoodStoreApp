@@ -8,6 +8,7 @@
     android:background="@drawable/fondo_presen"
     android:orientation="vertical">
 
+
     <Space
         android:layout_width="1dp"
         android:layout_height="15dp" />
@@ -27,6 +28,16 @@
     <Space
         android:layout_width="1dp"
         android:layout_height="15dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
 
     <!--Category name label -->
     <TextView
@@ -72,6 +83,9 @@
             android:id="@+id/rbtnComidaRapida"
             />
     </RadioGroup>
+
+
+
     <Space
         android:layout_width="1dp"
         android:layout_height="15dp" />
@@ -221,9 +235,8 @@
             android:textColor="#000000"/>
     </LinearLayout>
 
+        </LinearLayout>
 
-
-
-
+    </ScrollView>
 
 </LinearLayout>

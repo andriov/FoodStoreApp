@@ -45,6 +45,7 @@ public class ProductRegister extends AppCompatActivity {
         //Let connection in main thread
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
+        openConnection.setUrl("http://192.168.43.168:8000/rest/productos");
         //Insertion of the references(activity_product_register) of the button and EditText created as global variables
         productName = (EditText) findViewById(R.id.productName);
         productDescription = (EditText) findViewById(R.id.productDescription);
@@ -70,12 +71,13 @@ public class ProductRegister extends AppCompatActivity {
                                     Intent i=new Intent(getApplicationContext(),LateralMenu.class);
                                     //If the name is greater than 30 charcters or is a number we obtain a exception
                                     exception.stinException("name",productName.getText(),30);
-                                    //If the name is greater than 240 charcters or is a number we obtain a exception
+                                     //If the name is greater than 240 characters or is a number we obtain a exception
                                     exception.stinException("description",productDescription.getText(),240);
                                     //If the stock is not an integer we obtain a exception
                                     exception.stinException("stock",productStock.getText());
                                     //If the cost is not a double number we obtain a exception
                                     exception.stinException("cost",productCost.getText());
+                                    //Keep the choosen category
                                     validation();
                                     openConnection.insertarDatos("{\"category\":\""+rbtnanswer+"\",\"name\":\""+productName.getText().toString()
                                             +"\",\"description\":\""+productDescription.getText().toString()+"\",\"stock\":"+productStock.getText().toString()
@@ -85,12 +87,13 @@ public class ProductRegister extends AppCompatActivity {
                                     //Print the exactly error for developer
                                     System.out.println(e.getMessage());
                                     //Message that insert correct values to user
-                                    Toast.makeText(getApplicationContext(),"Insert correct values",Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_LONG).show();
                                 }catch ( Exception e2){
                                     //If exit other error that not has Exceptions package, obtain it for the developer
                                     System.out.println(e2.getMessage());
+                                    //Message that insert correct values to user
+                                    Toast.makeText(getApplicationContext(),"Connection problems",Toast.LENGTH_LONG).show();
                                 }
-
                             }
                         });
                     }
@@ -100,6 +103,7 @@ public class ProductRegister extends AppCompatActivity {
         });
     }
 
+    //Analisis where is the checked
     private void validation(){
         if(rbtBreakFast.isChecked()){
             rbtnanswer=1;
@@ -111,5 +115,4 @@ public class ProductRegister extends AppCompatActivity {
             rbtnanswer=3;
         }
     }
-
 }

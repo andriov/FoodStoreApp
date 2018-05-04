@@ -48,8 +48,7 @@ public class FragmentSellerProfile extends Fragment {
         StrictMode.setThreadPolicy(policy);
         //This is the list view in the activity_home that will show us all the products as a list
         list = (ListView) view.findViewById(R.id.listView);
-
-
+        openConnection.setUrl("http://192.168.43.168:8000/rest/productos");
         try {
             //Obtain Json array of products
             String result = openConnection.obtenerDatos();
@@ -66,7 +65,6 @@ public class FragmentSellerProfile extends Fragment {
             Log.d("error numero 2", "problema numero 2 no se pudo conectar");
             e.printStackTrace();
         }
-
         //Button to insert new product that open Product Register
         insertProductPrincipalButton = (Button) view.findViewById(R.id.buttonNewProduct);
         insertProductPrincipalButton.setOnClickListener(new View.OnClickListener() {
