@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.foodstorewebservice.OpenConnection;
 
@@ -48,6 +49,7 @@ public class FragmentSellerProfile extends Fragment {
         StrictMode.setThreadPolicy(policy);
         //This is the list view in the activity_home that will show us all the products as a list
         list = (ListView) view.findViewById(R.id.listView);
+        //Insertion of URL
         openConnection.setUrl("http://192.168.43.168:8000/rest/productos");
         try {
             //Obtain Json array of products
@@ -61,8 +63,10 @@ public class FragmentSellerProfile extends Fragment {
         } catch (MalformedURLException e) {
             Log.d("error numero 1", "problema numero 1 no se pudo conectar");
             e.printStackTrace();
+            Toast.makeText(getContext(),"Connection problems",Toast.LENGTH_LONG).show();
         } catch (IOException e) {
             Log.d("error numero 2", "problema numero 2 no se pudo conectar");
+            Toast.makeText(getContext(),"Connection problems",Toast.LENGTH_LONG).show();
             e.printStackTrace();
         }
         //Button to insert new product that open Product Register

@@ -45,6 +45,7 @@ public class ProductRegister extends AppCompatActivity {
         //Let connection in main thread
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
+        //Insertion of URL
         openConnection.setUrl("http://192.168.43.168:8000/rest/productos");
         //Insertion of the references(activity_product_register) of the button and EditText created as global variables
         productName = (EditText) findViewById(R.id.productName);
@@ -91,7 +92,7 @@ public class ProductRegister extends AppCompatActivity {
                                 }catch ( Exception e2){
                                     //If exit other error that not has Exceptions package, obtain it for the developer
                                     System.out.println(e2.getMessage());
-                                    //Message that insert correct values to user
+                                    //Message of not connection
                                     Toast.makeText(getApplicationContext(),"Connection problems",Toast.LENGTH_LONG).show();
                                 }
                             }
