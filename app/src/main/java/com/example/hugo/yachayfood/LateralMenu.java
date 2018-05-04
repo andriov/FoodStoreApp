@@ -15,6 +15,8 @@ import android.view.MenuItem;
 public class LateralMenu extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    Fragment fragment = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +32,11 @@ public class LateralMenu extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        fragment = new FragmentHome();
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.screen_frame_area, fragment);
+        ft.commit();
     }
 
     @Override
@@ -67,8 +74,6 @@ public class LateralMenu extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        Fragment fragment = null;
 
         // Handle navigation view item clicks here.
         int id = item.getItemId();
@@ -79,6 +84,9 @@ public class LateralMenu extends AppCompatActivity
             fragment = new FragmentSellerProfile();
             //Intent intent = new Intent(this, SellerProfile.class);
             //startActivity(intent);
+        } else if (id == R.id.nav_home) {
+            fragment = new FragmentHome();
+
         } else if (id == R.id.nav_shopping_cart) {
 
         } else if (id == R.id.nav_orders) {
